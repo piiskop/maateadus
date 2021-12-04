@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="peacecop kalmer:" />
+
+
+<title>kodutööde aruanne õppeaines Maateaduse alused (2021 sügisel)</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Maateadus</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Maateadus</a>
+</li>
+<li>
+  <a href="island.html">Island</a>
+</li>
+<li>
+  <a href="klimatoloogia.html">Klimatoloogia</a>
+</li>
+<li>
+  <a href="about.html">Autor</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">kodutööde aruanne õppeaines Maateaduse alused (2021 sügisel)</h1>
+<h4 class="author">peacecop kalmer:</h4>
+<h4 class="date">12/2/2021</h4>
+
+</div>
+
+
+<div id="ül-1-ilmavaatlus" class="section level2" number="0.1">
+<h2><span class="header-section-number">0.1</span> Ül 1, <strong>Ilmavaatlus</strong></h2>
+<div id="ülesande-püstitus" class="section level3" number="0.1.1">
+<h3><span class="header-section-number">0.1.1</span> Ülesande püstitus</h3>
+<p><strong>Töö eesmärgiks</strong> (lisaks sellele, et saada pisut värsket õhku) on avastada vajadus mõõtmisvahendite, väärtuse leidmise ja määrmaatuse hindamise järele meie vaatlustes.</p>
+<p>Tuleb minna õue! Pole vaja mingeid instrumente - selles ülesandes saab piirduda vaid visuaalsete vaatlustega. Vasta järgnevatele küsimustele nii hästi kui oskad, aga ära looda välja tulla täpsete andmetega!</p>
+<p>Märgi üles vaatluste koht, kellaaeg ja kuupäev!</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Missugune on tuule suund? Kuidas Sa määrasid selle?</p></li>
+<li><p>Kui suur on tuule kiirus ja kuidas Sa määrasid selle?</p></li>
+<li><p>Missugune on temperatuur (Kasuta sõnu. Ära kasuta numbreid. Kasuta subjektiivseid termineid)</p></li>
+<li><p>Nüüd püüa defineerida neid termineid, mida kasutasid just temperatuuri kirjeldamisel.</p></li>
+<li><p>Missugune on õhurõhk? (Mis paneb Sind nõnda arvama?)</p></li>
+<li><p>Missugune on Päikese kõrgus (Kui kõrgel kraadides on Päike horisondi kohal)?</p></li>
+<li><p>Kui suur osa taevast (%) on pilvedega kaetud?</p></li>
+<li><p>Kui kõrgel asetseb pilvede alumine piir?</p></li>
+<li><p>Kui palju eri liike pilvi on taevas?</p></li>
+<li><p>Kirjelda erinevaid pilveliike taevas.</p></li>
+<li><p>Kuidas Sa hindad oma eelneate vastuste “täpsust?”</p></li>
+</ol>
+</div>
+<div id="lahendus" class="section level3" number="0.1.2">
+<h3><span class="header-section-number">0.1.2</span> Lahendus</h3>
+<p>Vaatluse koht: Harku alevik.</p>
+<p>Kellaaeg: 1929.</p>
+<p>Kuupäev: 20211202.</p>
+<p>Vastan ülesande püstituses esitatud alamülesannetele:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Vaatasin puu oksi. Neid justkui tõugati minu poole. Minu rõdu avaneb lõunasse. Puu on kagus. Seega on tuule suund kagust loodesse.</p></li>
+<li><p>Tuul on mõõduka tugevusega. Kuulen, et lipuvarraste rihmad plaksuvad vastu vardaid. Nõrga tuulega seda anomaaliat pole. Tugeva tuulega näeksin puude oksi rohkem liikumas.</p></li>
+<li><p>Seisin paljajalu lumel. Külm oli.</p></li>
+<li><p>seisma: püstises asendis viibima; paljajalu: ilma et jalalabad oleksid kaetud; lumi: kristalliseerunud, kuid ühtlasi hõre vesi; külm: mitte soe; olema: eksisteerima</p></li>
+<li><p>Tundub, et õhurõhk on tavaline. Arvan nii, sest ei saja ja kui viimati valgel ajal vaatasin taevast, oli see pilves.</p></li>
+<li><p>Päike loojus juba mitu tundi tagasi. Arvan, et selle kõrgus horisondi kohal on -50 °.</p></li>
+<li><p>Pilvisust ei saa tuvastada, kuna on juba pime. Või siiski. Oota natuke, ma lähen vaatan uuesti. Ootad, jah? Hea küll. Olen tagasi. Tähti ei näinud. Seega 100 %.</p></li>
+<li><p>No seda ma küll praegu pimedas tuvastada ei saa. Udu ei ole, seega ikka kõrgemal kui Harku majad ja puud.</p></li>
+<li><p>Kõlab nagu <em>Mitu tähte on taevas?</em>. Ei saa tuvastada pilvede liike praegu pimedas.</p></li>
+<li><p>Ei kirjelda ma midagi, ühtlaselt pime on.</p></li>
+<li><p>Hindan, et hindasin piisava täpsusega enda ja selle ülesande jaoks.</p></li>
+</ol>
+</div>
+</div>
+<div id="ül-2.-ilmanähtuse-kohta-info-otsimine" class="section level2" number="0.2">
+<h2><span class="header-section-number">0.2</span> Ül 2. <strong>Ilmanähtuse kohta info otsimine</strong></h2>
+<div id="ülesande-püstitus-1" class="section level3" number="0.2.1">
+<h3><span class="header-section-number">0.2.1</span> Ülesande püstitus</h3>
+<pre class="r"><code>colorize &lt;- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf(&quot;\\textcolor{%s}{%s}&quot;, color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf(&quot;&lt;span style=&#39;color: %s;&#39;&gt;%s&lt;/span&gt;&quot;, color,
+      x)
+  } else x
+}
+
+underline &lt;- function(text) {
+  if (knitr::is_latex_output()) {
+    sprintf(&quot;\\text{\\underline{%1$s}}&quot;, text)
+  } else if (knitr::is_html_output()) {
+    sprintf(&quot;&lt;span style=&#39;text-decoration: underline;&#39;&gt;%1$s&lt;/span&gt;&quot;, text)
+  } else {
+    text
+  }
+}</code></pre>
+<p>Otsige Internetist (<span style="color: red;">valige üks kolmest</span>) infot järgmise nähtuse kohta vastavalt etteantud kavale (A-G). Kirjutage vastused lõppu otse aruande faili.</p>
+<p>HADLEY RAKK või FERRELI RAKK või POLAARRAKK</p>
+<p>A. (nähtuse esmakirjeldaja nimi ja eluaastad): …</p>
+<p>B. (atmosfäääri tsirkulatsiooni tekke algpõhjus): …</p>
+<p>C. (õhu vertikaalse tõusu piirkond): …</p>
+<p>D. (õhu vertikaalse laskumise piirkond): …</p>
+<p>E. (sademeterikas piirkond): …</p>
+<p>F. (kuiv piirkond): …</p>
+<p>G. (maapinnalähedaste tuulte üldnimetus): …</p>
+</div>
+<div id="lahendus-1" class="section level3" number="0.2.2">
+<h3><span class="header-section-number">0.2.2</span> Lahendus</h3>
+<p>Kuna HADLEY RAKU kohta napib ajakohast teavet, valisin nähtuseks FERRELI RAKU:</p>
+<p>A. William Ferreli keha elas väidetavalt aastais 1817 - 1891. <span class="citation">(Mdnavman 2014)</span></p>
+<p>B. Maa pöörleb 23-° nurga all, mistõttu soojenevad Päikese energiapakkumise tõttu Maa eri osad erinevalt. Ekvaatori piirkond saab kõige enam energiat ja polaaralad kõige vähem. Soe õhk tõuseb ekvaatorile lähemal ja laskub ekvaatorist kaugemal. Õhk liigub, kuna õhurõhk on eri piirkondades erinev. Seda õhuliikumist nimetatakse tuuleks, mis voolab kõrge rõhuga alast madala rõhuga alasse. Õhu liikumise suuna määrab Coriolise jõud. <span class="citation">(<span>“Atmosphärische Zirkulation - Schulfilm Geographie”</span> 2021)</span></p>
+<p>C. 60 kuni 70 ° põhjapoolkeral ja -60 kuni -70 ° lõunapoolkeral. <span class="citation">(Chris Johnson 2021)</span></p>
+<p>D. 35 ° põhjapoolkeral ja -35 ° lõunapoolkeral. <span class="citation">(Chris Johnson 2021)</span></p>
+<p>E. Sademeterikas piirkond on Ferreli raku põhjaosas, kus asub alampolaarne madalrõhu piirkond. <span class="citation">(<span>“Atmosphärische Zirkulation - Schulfilm Geographie”</span> 2021)</span> <span class="citation">(Chris Johnson 2021)</span></p>
+<p>F. Kuiv piirkond on Ferreli raku lõunaosas, kus asub alampolaarne kõrgrõhu piirkond. <span class="citation">(<span>“Atmosphärische Zirkulation - Schulfilm Geographie”</span> 2021)</span> <span class="citation">(Chris Johnson 2021)</span></p>
+<p>G. Läänetuuled. <span class="citation">(<span>“Atmosphärische Zirkulation”</span> 2016)</span></p>
+</div>
+</div>
+<div id="ül-3.-kliimadiagrammi-koostamine" class="section level2" number="0.3">
+<h2><span class="header-section-number">0.3</span> Ül 3. <strong>Kliimadiagrammi koostamine</strong></h2>
+<div id="ülesande-püstitus-2" class="section level3" number="0.3.1">
+<h3><span class="header-section-number">0.3.1</span> Ülesande püstitus</h3>
+<p>Kasutage Eesti Ilmateenistuse kliimanorme allpool toodud interneti lehekülgedel ja <span style="color: red;">koostage kliimadiagramm kas oma kodukoha jaoks või valige alljärgnevalt kaardilt koht</span>, nt TÜRI linn. Diagrammi koostamisel on tingimuseks, et see peab</p>
+<ol style="list-style-type: decimal">
+<li><p>olema tehtud arvutis, mitte paberil;</p></li>
+<li><p>sinised tulbad peavad kujutama kuu sademete hulkasid ja punane joon peab kujutama kuu keskmisi õhutemperatuure (seega peab diagramm peab olema 2-teljeline).</p></li>
+</ol>
+<p>Kopeerige valmis diagramm tabelarvutusprogrammist Painti (vm graafikaprogrammi) ja salvestage see <span style="text-decoration: underline;">pildifailina.</span></p>
+<p><a href="https://www.ilmateenistus.ee/kliima/kliimanormid/ohutemperatuur/" class="uri">https://www.ilmateenistus.ee/kliima/kliimanormid/ohutemperatuur/</a></p>
+<p><a href="https://www.ilmateenistus.ee/kliima/kliimanormid/sademed/" class="uri">https://www.ilmateenistus.ee/kliima/kliimanormid/sademed/</a></p>
+</div>
+<div id="lahendus-2" class="section level3" number="0.3.2">
+<h3><span class="header-section-number">0.3.2</span> Lahendus</h3>
+<p>Kliimadiagramm on kujutatud joonisel <a href="#fig:figureForClimate">1</a>.</p>
+<pre class="r"><code>month = c(&quot;I&quot;, &quot;II&quot;, &quot;III&quot;, &quot;IV&quot;, &quot;V&quot;, &quot;VI&quot;, &quot;VII&quot;, &quot;VIII&quot;, &quot;IX&quot;, &quot;X&quot;, &quot;XI&quot;, &quot;XII&quot;)
+
+precipitations = c(56, 50, 37, 35, 37, 68, 82, 85, 58, 78, 66, 59)
+
+temperatureOfAir = c(-2.9, -3.6, -.6, 4.8, 10.2, 14.5, 17.6, 16.5, 12, 6.5, 2, -.9)
+
+dataframeForClimate = data.frame(month = month, precipitations = precipitations, temperatureOfAir = temperatureOfAir)
+
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>dataframeForClimate = dataframeForClimate %&gt;%
+  mutate(temperatureOfAirInK = temperatureOfAir + 273.15)
+
+colnames(dataframeForClimate) = c(&quot;Kuu&quot;, &quot;Kuu keskmine sademete hulk (mm)&quot;, &quot;Kuu keskmine õhutemperatuur (°C)&quot;, &quot;Kuu keskmine õhutemperatuur (K)&quot;)
+
+dataframeForClimate</code></pre>
+<pre><code>##     Kuu Kuu keskmine sademete hulk (mm) Kuu keskmine õhutemperatuur (°C)
+## 1     I                              56                             -2.9
+## 2    II                              50                             -3.6
+## 3   III                              37                             -0.6
+## 4    IV                              35                              4.8
+## 5     V                              37                             10.2
+## 6    VI                              68                             14.5
+## 7   VII                              82                             17.6
+## 8  VIII                              85                             16.5
+## 9    IX                              58                             12.0
+## 10    X                              78                              6.5
+## 11   XI                              66                              2.0
+## 12  XII                              59                             -0.9
+##    Kuu keskmine õhutemperatuur (K)
+## 1                           270.25
+## 2                           269.55
+## 3                           272.55
+## 4                           277.95
+## 5                           283.35
+## 6                           287.65
+## 7                           290.75
+## 8                           289.65
+## 9                           285.15
+## 10                          279.65
+## 11                          275.15
+## 12                          272.25</code></pre>
+<pre class="r"><code>names(dataframeForClimate)</code></pre>
+<pre><code>## [1] &quot;Kuu&quot;                              &quot;Kuu keskmine sademete hulk (mm)&quot; 
+## [3] &quot;Kuu keskmine õhutemperatuur (°C)&quot; &quot;Kuu keskmine õhutemperatuur (K)&quot;</code></pre>
+<pre class="r"><code>library(plotly)
+
+plotly::plot_ly(data = dataframeForClimate, showlegend = FALSE) %&gt;%
+  add_trace(x = ~month, y = ~precipitations, marker = list(color = &quot;rgb(0, 0, 255)&quot;), name = &quot;Sademeid&quot;, type = &quot;bar&quot;) %&gt;%
+  add_trace(x = ~month, y = ~get(&quot;Kuu keskmine õhutemperatuur (K)&quot;), line = list(color = &quot;rgb(255, 0, 0)&quot;), marker = list(color = &quot;rgb(255, 0, 0)&quot;), name = &quot;Temperatuur&quot;, type = &quot;scatter&quot;, mode = &quot;lines+markers&quot;, yaxis = &quot;y2&quot;) %&gt;%
+#  add_text (x = month, y = precipitations, text = precipitations) %&gt;%
+  layout(title = &quot;Tallinn-Harku kuu keskmised sademete hulgad ja kuu keskmised õhutemperatuurid 1991-2020&quot;, xaxis = list(categoryorder = &quot;trace&quot;, categoryarray = dataframeForClimate$month, title = &quot;Kuu&quot;), yaxis2 = list(title = &quot;Kuu keskmine õhutemperatuur (K)&quot;, color = &quot;red&quot;, range = c(min(dataframeForClimate$`Kuu keskmine õhutemperatuur (K)`) - 1, max(dataframeForClimate$`Kuu keskmine õhutemperatuur (K)`) + 1), overlaying = &quot;y&quot;), yaxis = list(color = &quot;blue&quot;, side = &quot;right&quot;, title = &quot;Kuu keskmine sademete hulk (mm)&quot;), margin = list(r = 32))</code></pre>
+<div class="figure"><span style="display:block;" id="fig:figureForClimate"></span>
+<div id="htmlwidget-78733cf61c86c4dfbca1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-78733cf61c86c4dfbca1">{"x":{"visdat":{"ed704e2e7600":["function () ","plotlyVisDat"]},"cur_data":"ed704e2e7600","attrs":{"ed704e2e7600":{"showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"marker":{"color":"rgb(0, 0, 255)"},"name":"Sademeid","type":"bar","inherit":true},"ed704e2e7600.1":{"showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"line":{"color":"rgb(255, 0, 0)"},"marker":{"color":"rgb(255, 0, 0)"},"name":"Temperatuur","type":"scatter","mode":"lines+markers","yaxis":"y2","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":32},"title":"Tallinn-Harku kuu keskmised sademete hulgad ja kuu keskmised õhutemperatuurid 1991-2020","xaxis":{"domain":[0,1],"automargin":true,"categoryorder":"trace","categoryarray":["I","II","III","IV","IX","V","VI","VII","VIII","X","XI","XII"],"title":"Kuu","type":"category"},"yaxis2":{"title":"Kuu keskmine õhutemperatuur (K)","color":"red","range":[268.55,291.75],"overlaying":"y"},"yaxis":{"domain":[0,1],"automargin":true,"color":"blue","side":"right","title":"Kuu keskmine sademete hulk (mm)"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"showlegend":false,"x":["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"],"y":[56,50,37,35,37,68,82,85,58,78,66,59],"marker":{"color":"rgb(0, 0, 255)","line":{"color":"rgba(31,119,180,1)"}},"name":"Sademeid","type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"showlegend":false,"x":["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"],"y":[270.25,269.55,272.55,277.95,283.35,287.65,290.75,289.65,285.15,279.65,275.15,272.25],"line":{"color":"rgb(255, 0, 0)"},"marker":{"color":"rgb(255, 0, 0)","line":{"color":"rgba(255,127,14,1)"}},"name":"Temperatuur","type":"scatter","mode":"lines+markers","yaxis":"y2","error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1: Eesti Ilmateenistuse kliimanormeeritud Tallinn-Harku kuu keskmised sademete hulgad ja kuu keskmised õhutemperatuurid 1991-2020
+</p>
+</div>
+</div>
+</div>
+<div id="ül-4.-ilmaandmete-otsimine" class="section level2" number="0.4">
+<h2><span class="header-section-number">0.4</span> Ül 4. <strong>Ilmaandmete otsimine</strong></h2>
+<div id="ülesande-püstitus-3" class="section level3" number="0.4.1">
+<h3><span class="header-section-number">0.4.1</span> Ülesande püstitus</h3>
+<div class="figure">
+<img src="4-eesti-kaart.png" alt="" />
+<p class="caption">Eesti kaart</p>
+</div>
+<ol start="2008" style="list-style-type: decimal">
+<li>a novembri teises pooles tabas Eestit aastakümnete rängim lumetorm. Selle mõju ei hinnata siiski igal pool Eestis ühesuguseks, vaid mõnes kohas peetakse dets 2010 lumetormi Monikat olulisemaks.</li>
+</ol>
+<p>Kasutage Eesti Ilmateenistuse vaatlusandmete lehekülge <a href="https://www.ilmateenistus.ee/ilm/ilmavaatlused/vaatlusandmed/" class="uri">https://www.ilmateenistus.ee/ilm/ilmavaatlused/vaatlusandmed/</a> ja tormide konverentsi ettekandeid
+<a href="https://ilm.ee/kola/pildid/tormide_konverents/" class="uri">https://ilm.ee/kola/pildid/tormide_konverents/</a> ning pange kirja, milline oli Eesti ilmajaamadest
+maksimaalne tuule kiirus ja suund tormi kõrghetkel. Mille poolest erines see lumetorm Monikast?
+Lisaks määrake ilmakaardilt, millises suunas Eestist vaadates asus tormi põhjustanud tsükloni kese
+(24.11.2008 UTC 00 seisuga).</p>
+<ol style="list-style-type: decimal">
+<li><p>tuule keskmine kiirus: … m/s;</p></li>
+<li><p>tuule maksimaalne (puhanguline) kiirus: … m/s,</p></li>
+<li><p>tuule suund (kohalik aeg 24.11.2008 kell 00): … (ilmakaar sõna või tähega)</p></li>
+</ol>
+<p>3.1.) millest sellised territoriaalsed erinevused?</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>tsükloni keskme suund: … (ilmakaar sõna või tähega)</p></li>
+<li><p>milliseid rekordeid see torm põhjustas?</p></li>
+<li><p>mille poolest erines see torm lumetorm Monikast (dets 2010)?</p></li>
+<li><ol start="2008" style="list-style-type: decimal">
+<li>a oli veel igas mõttes üks väga sarnane lumetorm. Mis kuupäevadel ja mille poolest sarnane?</li>
+</ol></li>
+</ol>
+<p><span style="color: red;">VÕI</span></p>
+<p>Novembri esimestel päevadel 2017. a tabas Läänemaa ja Harjumaa piiril asuvas Nõva rannas
+jalutajaid ehmatav vaatepilt: lained olid kaldast ära kandnud suure koguse liiva, mille tagajärjel oli
+randa tekkinud kohati paari meetri kõrgune astang.</p>
+<p><a href="https://www.ilmateenistus.ee/ilm/ilmavaatlused/vaatlusandmed/" class="uri">https://www.ilmateenistus.ee/ilm/ilmavaatlused/vaatlusandmed/</a></p>
+<p>Kasutage Eesti ilmateenistuse vaatlusandmete lehekülge ja pange kirja, milline oli lähimas ehk
+Pakri ilmajaamas tuule kiirus ja suund tormi kõrghetkel,
+30. oktoobri 2017 hommikul kell 6.00
+kohaliku aja
+järgi. Lisaks määrake ilmakaardilt, millises suunas Eestist vaadates asus tormi põhjustanud tsükloni
+kese ehk tsenter (30. oktoober 2017 kl 6.00 UTC seisuga).</p>
+<ol style="list-style-type: decimal">
+<li><p>tuule keskmine kiirus: … m/s;</p></li>
+<li><p>tuule maksimaalne (puhanguline) kiirus: … m/s,</p></li>
+<li><p>tuule suund: … (ilmakaar sõna või tähega)</p></li>
+<li><p>tsükloni keskme suund: … (ilmakaar sõna või tähega)</p></li>
+</ol>
+<p>Ilmakaare määramiseks (kraadidest 8</p>
+<p>põhisuunale</p>
+<p>üleminekuks) kasutage</p>
+<p>järgnevat skeemi:</p>
+<div class="figure">
+<img src="4-ilmakaared.png" alt="" />
+<p class="caption">ilmakaared</p>
+</div>
+<p>Tsükloni keskme määramiseks</p>
+<p>kasutage lehekülge:
+wetter3.de</p>
+<p>Link:
+<a href="http://www1.wetter3.de/Archiv/" class="uri">http://www1.wetter3.de/Archiv/</a></p>
+<p>DWD Analyse-Archiv</p>
+</div>
+<div id="lahendus-3" class="section level3" number="0.4.2">
+<h3><span class="header-section-number">0.4.2</span> Lahendus</h3>
+<p>Kuna kola sait on tohutult aeglane, siis valisin teise alamülesande ning kirjutan üles selle andmed:</p>
+<ol style="list-style-type: decimal">
+<li><p>tuule keskmine kiirus: 12.7 m/s;</p></li>
+<li><p>tuule maksimaalne kiirus: 19.1 m/s,</p></li>
+<li><p>tuule suund: põhi (ilmakaar)</p></li>
+<li><p>tsükloni keskme suund: kagu (ilmakaar)</p></li>
+</ol>
+</div>
+</div>
+<div id="ül-5.-mikrokliima-vaatluspunktide-paigutamine-maastikule" class="section level2" number="0.5">
+<h2><span class="header-section-number">0.5</span> Ül 5. <strong>Mikrokliima vaatluspunktide paigutamine maastikule</strong></h2>
+<div id="ülesande-püstitus-4" class="section level3" number="0.5.1">
+<h3><span class="header-section-number">0.5.1</span> Ülesande püstitus</h3>
+<p>Kasutage kirjaga kaasas olevat
+pildifaili nimega „Neeruti piirkonna põhikaart”.
+Oletame, et olete õpetaja ja teil on vaja just kaardil
+näidatud alal, Lääne-Virumaal, Kadrina lähedal Neeruti mägede piirkonnas, viia suvisel ajal läbi
+mikrokliima uuring. Ala metsasust saate vaadata Maa-Ameti kaardiserveri ortofotolt.</p>
+<p>Ülesandeks on paigutada sellele alale (kaardipildile)
+<em>4 õhutemperatuuri andurit ja 2 tuule kiiruse andurit</em> selliselt, et oleks oodata võimalikult suuri erinevusi päevastes (umbes kell 15)
+vaatlustulemustes.</p>
+<p><span style="text-decoration: underline;">Kandke andurite asukohad (6) vastava leppemärgiga kaardile. NB! Leppemärke peab olema kahesuguseid, üks õhutemperatuuri, üks tuule kiiruse jaoks. Salvestage täiendatud kaart pildifailina oma arvutisse. Lisage kaardi järele 4-5 lauset selgituseks, miks te punktid selliselt paigutasite.</span></p>
+<div class="figure">
+<img src="neeruti.png" alt="" />
+<p class="caption">Neeruti kaart</p>
+</div>
+</div>
+<div id="lahendus-4" class="section level3" number="0.5.2">
+<h3><span class="header-section-number">0.5.2</span> Lahendus</h3>
+<p>Paigutaksin termoandurid maastikuliselt ja metsaliselt eri kohtadesse: ühe kõrgele lagedale alale, ühe madalale lagedale alale, ühe metsa, ühe järve äärde. Veekogu ääres olevat õhutemperatuur stabiilsem kui mujal. Kõrgemal võib olla rohkem tuult ja see õhku jahutada kui madalamal, või vastupidi. Metsa temperatuur võib ka olla üsna stabiilne, kuna ümberringi puud hoiavad temperatuuri, samas on seal ka veidi kasvuhoone efekti.</p>
+<p>Tuulekiiruse andurid paigutaksin kõrgele ja madalale lagedale alale arvates, et kõrgel võib olla tuulisem kui madalal. Metsa pole mõtet panna, kus tuult eriti ei olekski.</p>
+<p>Andurite võimalikud asukohad on märgitud interaktiivsele kaardile <a href="#fig:figureForNeeruti">2</a>.</p>
+<pre class="r"><code>#bboxForNeeruti = get_bbox(c(26.10424, 59.31232, 26.137566, 59.301507))
+#objectsAsBuildings = extract_osm_objects(key = &quot;building&quot;, bbox = bboxForNeeruti)
+#objectsAsNatural = extract_osm_objects(key = &quot;highway&quot;, bbox = bboxForNeeruti)
+#mapForNeeruti &lt;- osm_basemap(bbox = bboxForNeeruti, bg = &quot;white&quot;)
+#mapForNeeruti &lt;- add_osm_objects(map = mapForNeeruti, obj = objectsAsBuildings)
+#mapForNeeruti &lt;- add_osm_objects(map = mapForNeeruti, obj = objectsAsNatural)
+#print_osm_map(mapForNeeruti)
+
+library(&quot;OpenStreetMap&quot;)
+#mapForNeeruti = openmap(c(59.31232, 26.10424), c(59.301507, 26.137566), type = &quot;osm&quot;)
+#plot(mapForNeeruti)
+library(leaflet)
+leaflet() %&gt;% addProviderTiles(providers$Esri.WorldTopoMap) %&gt;% fitBounds(26.114, 59.31232, 26.13, 59.301507) %&gt;% addLabelOnlyMarkers(lng = 26.112, lat = 59.308577, label = &quot;\U1F321&quot;, labelOptions = labelOptions(noHide = T, textOnly = T, textsize = &quot;32px&quot;)) %&gt;% addLabelOnlyMarkers(lng = 26.134, lat = 59.3115, label = &quot;\U1F321&quot;, labelOptions = labelOptions(noHide = T, textOnly = T, textsize = &quot;32px&quot;)) %&gt;% addLabelOnlyMarkers(lng = 26.124, lat = 59.304, label = &quot;\U1F321&quot;, labelOptions = labelOptions(noHide = T, textOnly = T, textsize = &quot;32px&quot;)) %&gt;% addLabelOnlyMarkers(lng = 26.138, lat = 59.307, label = &quot;\U1F321&quot;, labelOptions = labelOptions(noHide = T, textOnly = T, textsize = &quot;32px&quot;)) %&gt;% addLabelOnlyMarkers(lng = 26.113, lat = 59.308577, label = &quot;\U1F32C&quot;, labelOptions = labelOptions(noHide = T, textOnly = T, textsize = &quot;32px&quot;)) %&gt;% addLabelOnlyMarkers(lng = 26.135, lat = 59.3115, label = &quot;\U1F32C&quot;, labelOptions = labelOptions(noHide = T, textOnly = T, textsize = &quot;32px&quot;)) %&gt;% addLegend(&quot;bottomright&quot;, labels = c(&quot;\U1F321: termoandur&quot;, &quot;\U1F32C: tuuleandur&quot;), title = &quot;Andurid&quot;, opacity = .8, colors = c(&quot;&quot;, &quot;&quot;))</code></pre>
+<div class="figure"><span style="display:block;" id="fig:figureForNeeruti"></span>
+<div id="htmlwidget-aa2371e74f4e3386670c" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aa2371e74f4e3386670c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[59.308577,26.112,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"🌡",{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"32px","textOnly":true,"className":"","sticky":true},null]},{"method":"addMarkers","args":[59.3115,26.134,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"🌡",{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"32px","textOnly":true,"className":"","sticky":true},null]},{"method":"addMarkers","args":[59.304,26.124,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"🌡",{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"32px","textOnly":true,"className":"","sticky":true},null]},{"method":"addMarkers","args":[59.307,26.138,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"🌡",{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"32px","textOnly":true,"className":"","sticky":true},null]},{"method":"addMarkers","args":[59.308577,26.113,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"🌬",{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"32px","textOnly":true,"className":"","sticky":true},null]},{"method":"addMarkers","args":[59.3115,26.135,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"🌬",{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"32px","textOnly":true,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["",""],"labels":["🌡: termoandur","🌬: tuuleandur"],"na_color":null,"na_label":"NA","opacity":0.8,"position":"bottomright","type":"unknown","title":"Andurid","extra":null,"layerId":null,"className":"info legend","group":null}]}],"fitBounds":[59.31232,26.114,59.301507,26.13,[]],"limits":{"lat":[59.304,59.3115],"lng":[26.112,26.138]}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 2: Õhutemperatuuri ja tuule kiiruse andurite võimalikud asukohad Neeruti piirkonnas
+</p>
+</div>
+</div>
+</div>
+<div id="ül-6.-ilmateemaline-uudis" class="section level2" number="0.6">
+<h2><span class="header-section-number">0.6</span> Ül 6. <strong>Ilmateemaline uudis</strong></h2>
+<div id="ülesande-püstitus-5" class="section level3" number="0.6.1">
+<h3><span class="header-section-number">0.6.1</span> Ülesande püstitus</h3>
+<p>Vaadake läbi ETV koduleheküljel olev kolmapäeva, 3. aprilli 2019 õhtuse “Aktuaalne kaamer. Ilm” saate<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> lõpuosas olev lõik (ajaliselt 30.53 - 32.48) , kus on juttu Pärnu ilmajaama (meteoroloogiajaama) kolimisest. <em>Koostage selle klipi põhjal 8 küsimust,</em>, mida sooviksite õpilastelt küsida. NB! Võib esitada ka ühe sellise küsimuse, millele vastust klipis otseselt ei leidu, kuid mis on klipist inspireeritud või mõne seal puudutatud teemaga lähedalt seotud.</p>
+<p><strong><span style="color: red;">Alternatiivina sellele ülesandele</span>:</strong> loe uudist <span style="color: blue;"><span style="text-decoration: underline;"><a href="https://www.vooremaa.ee/kas-agrometeoroloogilised-uuringud-jatkuvad/" class="uri">https://www.vooremaa.ee/kas-agrometeoroloogilised-uuringud-jatkuvad/</a></span></span>, et agrometeoroloogia on Eestis hääbumas.</p>
+<p><em>Koostage selle uudise põhjal 8 küsimust,</em> mida sooviksite õpilastelt küsida. NB! Võib esitada ka ühe sellise küsimuse, millele vastust uudises otseselt ei leidu, kuid mis on uudisest inspireeritud või mõne seal pudutatud teemaga lähedalt seotud.</p>
+</div>
+<div id="lahendus-5" class="section level3" number="0.6.2">
+<h3><span class="header-section-number">0.6.2</span> Lahendus</h3>
+<p>Kirjutasid küll, et ei leidnud otselinki, ometi see on otselink. Vähemalt tänapäevas. Nii et valisin peavalu meedia saate jupi ja minu küsimused tulevad siit:</p>
+<ol style="list-style-type: decimal">
+<li><p>Miks saab peale meteoroloogiajaama kolimist Pärnu lennuväljalt Pärnu linnna keskele Pärnu ilma kohta täpsemaid andmeid kui enne kolimist?</p></li>
+<li><p>Milline aastaaeg oli lennuväljal soojem kui siselinnas?</p></li>
+<li><p>Milline aastaaeg oli lennuväljal jahedam kui siselinnas?</p></li>
+<li><p>Kui kaugel on Pärnu lennuväli Pärnu siselinnast linnulennult?</p></li>
+<li><p>Lisaks eesti rahvuslipule oli lipuvarraste küljes lehvimas Euroopa Liidu lipp ja veel üks punalipp. Mida on täpselt sellel lipul kujutatud ja mille lipp see üldse on?</p></li>
+<li><p>Millised on Pärnu lipu värvid?</p></li>
+<li><p>Kus on tuul tugevam, kas Pärnu siselinnas või Pärnu lennuväljal?</p></li>
+<li><p>Milline lind ujus Pärnu jões?</p></li>
+<li><p>Kes oli MIINA KRABBI?</p></li>
+<li><p>Kus oli rohkem pilvi, kas Pärnu siselinnas või Pärnu lennuväljal?</p></li>
+<li><p>Milline number on kaameraga posti küljes?</p></li>
+<li><p>Kes oli Pärnu lennujaama juhataja?</p></li>
+<li><p>Kus mõõdetakse pärast kolimist tuule kiirust ja suunda?</p></li>
+<li><p>Millal hakati ilmavaatlusi Pärnus tegema?</p></li>
+</ol>
+<p>Panin rohkem küsimus, et ennast rohkem rehabiliteerida võimaliku tähtaja eiramisest.</p>
+</div>
+</div>
+<div id="ül-7.-kasvuhooneefekti-simulatsioon" class="section level2" number="0.7">
+<h2><span class="header-section-number">0.7</span> Ül 7. <strong>Kasvuhooneefekti simulatsioon</strong></h2>
+<div id="ülesande-püstitus-6" class="section level3" number="0.7.1">
+<h3><span class="header-section-number">0.7.1</span> Ülesande püstitus</h3>
+<p>Uurige lähemalt Drive’i kaustas <span style="color: blue;"><a href="https://drive.google.com/drive/folders/1zGVxTU512FMbcHpLEL_5SVL4lKvY6STh" class="uri">https://drive.google.com/drive/folders/1zGVxTU512FMbcHpLEL_5SVL4lKvY6STh</a></span> olevat arvutisimulatsiooni kasvuhooneefekti kohta (fail “greenhouse_en.jar.”)</p>
+<p>Simulatsiooni paremaks mõistmiseks vaadake läbi ka samas kaustas olev filmiklipp “The Greenhouse Effect.mp4,” kus autor jagab loodud animatsiooni kohta selgitusi. Mõelge läbi ja kirjeldage, kuidas teie seda simulatsiooni (NB! Ilma autori selgitusteta versioon!) tunnis kasutaksite? Millist rolli näeksite endal (õpetajana) ning millise ülesande (või ülesanded) annaksite õpilastele?</p>
+</div>
+<div id="lahendus-6" class="section level3" number="0.7.2">
+<h3><span class="header-section-number">0.7.2</span> Lahendus</h3>
+<p>Laseksin esmalt õpilastel simulatsiooniga mängida ja uurida, mis on selle mõte. Tahan veenduda, et nad saavad aru, milline erinevus on Päikese footonitel ja soojusfootonitel. Kui nad sellest aru ei saa, siis selgitan nende erinevust. Räägin õhu koostisest. Palun neil kasutada simulatsiooni, selgitamaks välja, millistest komponentidest lähevad millised footonid läbi ja millistest ei pruugi minna. Lasen neil jõuda selleni, milliseid koostisosi on vaja selleks, et Maal oleks soe. Samuti lasen neil nuputada, miks jääajas oli külm.</p>
+</div>
+</div>
+<div id="järelm" class="section level2" number="0.8">
+<h2><span class="header-section-number">0.8</span> Järelm</h2>
+<p>Möllasin nende seitsme ülesande kallal kui kaua? Teises detsembripäevas alustasin. Neljandas jõudsin lõppu. Miks nii kaua? Sest õppisin tehnilisi võimalusi, kuidas kogu seda värki <em>RStudio</em>s ilusti teha. Esimese ülesandega edenesin kiiresti. Polnud väga vaja aju pingutada. Järgmise puhul oli juba korralikult vaja otsida infot, sest ega ma ei teadnud mitte ühestki nimetatud rakust mitte ööd ega mütsi. Nüüd on mul info kõigi kolme kohta. Kliimadiagrammi olin varem teinud teistpidi: sademed joonenda, temperatuur tulpadena. Nüüd otsisin juurde, kuidas värvida sihiteadlikult. Vaatlusandmete põhine ülesanne tähendas minu jaoks eelkõige uurimist, kuidas pilti siia lisada. Viienda ülesandega tegelesin mitu tundi viimases päevas, sest vaja oli ühendada korralik kaart tekstiliste markeritega. Väidetava Maaameti kaart (ma heameelega ei väidaks seda väidetavaks, kui see poleks osa finantsorjandussüsteemist) näitab küll väga vingelt LiDARiga kaardistust, ometi ei leidnud ma sobilikku kaarti, mida saaksin <em>RStudio</em>s sama vingelt kasutada. Pärast kauaaegset katsetamist jäin <em>leaflet</em>i juurde, mis võimaldab küll lisada tähistusi, legendi, interaktiivset kaarti, aga mitte seda konkreetset kaarti. Panin kõige ligilähedasema. Kogu lähtekoodi näed ka, samuti seda osa, mille välja lülitasin, sest sellega saaks ilmselt ka kuidagi kogu selle kompoti kokku, ainult et vast ma õpin seda kunagi hiljem. Selles ülesandes oli sisuliselt enamus asju oletuslik, sest ma pole veel saanud täielikult aru, kuidas need õhutemperatuurid ja tuulekiirused eri maastikuosades erinevad on. Hakkan mahukat õpikut lugema varsti. Uudise kohta küsimuste küsimine oli nauding. Võis ju küsida mida iganes, kasvõi <em>PÄRNU SADAM</em>a hoone värvi! Viimase simulatsiooni saanuksime ilmselt ka otse PHET’i veebisaidist kätte, aga noh, kindlus eelkõige, kui usaldada Google’t. Ma olen Google’st juba edasi jõudnud ja ei usalda Google’t. Seega on Google Drive <em>out</em>. Igatahes oli video kõvasti abiks, sest ilma sellest kuluks ikka ilmatu palju aega, et aru saada, mis värk on, kui pole alusmüüri all.</p>
+<p>Mulle väga meeldis, et koostasid sellised ülesanded, kuigi need väga ei haaku sellega, mida sa õppesessioonides rääkisid. Tulevase loodusteemade õpetajana on, millest lähtuda.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bildungsserver" class="csl-entry">
+<span>“Atmosphärische Zirkulation.”</span> 2016. October 10, 2016. <a href="https://wiki.bildungsserver.de/klimawandel/index.php/Atmosph%C3%A4rische_Zirkulation">https://wiki.bildungsserver.de/klimawandel/index.php/Atmosph%C3%A4rische_Zirkulation</a>.
+</div>
+<div id="ref-youtube" class="csl-entry">
+<span>“Atmosphärische Zirkulation - Schulfilm Geographie.”</span> 2021. Schulfilme im Netz. April 7, 2021. <a href="https://youtu.be/DoOts0siRhQ">https://youtu.be/DoOts0siRhQ</a>.
+</div>
+<div id="ref-libretexts" class="csl-entry">
+Chris Johnson, Paul Inkenbrandt, Matthew D. Affolter. 2021. <span>“13.2: The Origin of Deserts.”</span> Faculty (Geology) at Salt Lake Community College. February 15, 2021. <a href="https://geo.libretexts.org/Bookshelves/Geology/Book%3A_An_Introduction_to_Geology_(Johnson_Affolter_Inkenbrandt_and_Mosher)/13%3A_Deserts/13.02%3A_The_Origin_of_Deserts">https://geo.libretexts.org/Bookshelves/Geology/Book%3A_An_Introduction_to_Geology_(Johnson_Affolter_Inkenbrandt_and_Mosher)/13%3A_Deserts/13.02%3A_The_Origin_of_Deserts</a>.
+</div>
+<div id="ref-wikipedia" class="csl-entry">
+Mdnavman. 2014. <span>“Ferrel.”</span> 2014. <a href="https://en.wikipedia.org/w/index.php?title=Ferrel&amp;oldid=611464046">https://en.wikipedia.org/w/index.php?title=Ferrel&amp;oldid=611464046</a>.
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>- <span style="color: blue;"><span style="text-decoration: underline;"><a href="https://etv.err.ee/922109/aktuaalne-kaamera-ilm" class="uri">https://etv.err.ee/922109/aktuaalne-kaamera-ilm</a></span></span> - üleval tuleb kalendrist valida õige kuupäev, sest vaikimisi on seal vale kuupäev. Seejärel tuleb saatekava riba kerida õige AK koha peale ja klikkida. Otselinki õigele saatele ei leidnud.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

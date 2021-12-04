@@ -1,0 +1,12 @@
+name: "maateadus"
+navbar:
+  title: "Maateadus"
+  left:
+    - text: "Maateadus"
+      href: index.html
+    - text: "Island"
+      href: island.html
+    - text: "Klimatoloogia"
+      href: klimatoloogia.html
+    - text: "Autor"
+      href: about.html
