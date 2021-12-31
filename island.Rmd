@@ -54,17 +54,19 @@ plotOfIceland = ggplot() +
   # Where?
   geom_text(data = data.frame(lon = -15, lat = 63.7), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F310", size = 16, vjust = .2, color = "#DC1E35") +
   # Geology
-  geom_text(data = data.frame(lon = -14, lat = 66), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F3d7", size = 16, vjust = .2, color = "#DC1E35") +
+  geom_text(data = data.frame(lon = -14, lat = 65.9), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F3d7", size = 16, vjust = .2, color = "#DC1E35") +
   # Plants
   geom_text(data = data.frame(lon = -21, lat = 66), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F331", size = 16, vjust = .2, color = "#DC1E35") +
   # Animals
-  geom_text(data = data.frame(lon = -23, lat = 64.5), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F415", size = 16, vjust = .2, color = "#DC1E35") +
+  geom_text(data = data.frame(lon = -23, lat = 64.5), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F40e", size = 16, vjust = .2, color = "#DC1E35") +
   # Human activities
   geom_text(data = data.frame(lon = -23.7, lat = 64), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F477", size = 16, vjust = .2, color = "#DC1E35") +
   # Climate
   geom_text(data = data.frame(lon = -14.4, lat = 64.1), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F326", size = 16, vjust = .2, color = "#DC1E35") +
   # Currents
-  geom_text(data = data.frame(lon = -16.3, lat = 63.7), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F30a", size = 16, vjust = .2, color = "#DC1E35")
+  geom_text(data = data.frame(lon = -16.3, lat = 63.7), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F30a", size = 16, vjust = .2, color = "#DC1E35") +
+  # Soil
+  geom_text(data = data.frame(lon = -23.5, lat = 65.2), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F30b", size = 16, vjust = .2, color = "#DC1E35")
  # geom_point(data = data.frame(lon = -16.332083, lat = 64.951083), aes(x = lon, y = lat))
 plotOfIceland
 ggsave(file="iceland.svg", plot=plotOfIceland)
