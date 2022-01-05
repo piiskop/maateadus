@@ -9,10 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
-
-
-
 ```{r cars}
 library(tibble)
 dailyMeans = data.frame("Kuu" = c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"),
@@ -60,13 +56,15 @@ plotOfIceland = ggplot() +
   # Animals
   geom_text(data = data.frame(lon = -23, lat = 64.5), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F40e", size = 16, vjust = .2, color = "#DC1E35") +
   # Human activities
-  geom_text(data = data.frame(lon = -23.7, lat = 64), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F477", size = 16, vjust = .2, color = "#DC1E35") +
+  geom_text(data = data.frame(lon = -23.5, lat = 63.8), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F477", size = 16, vjust = .2, color = "#DC1E35") +
   # Climate
   geom_text(data = data.frame(lon = -14.4, lat = 64.1), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F326", size = 16, vjust = .2, color = "#DC1E35") +
   # Currents
   geom_text(data = data.frame(lon = -16.3, lat = 63.7), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F30a", size = 16, vjust = .2, color = "#DC1E35") +
   # Soil
-  geom_text(data = data.frame(lon = -23.5, lat = 65.2), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F30b", size = 16, vjust = .2, color = "#DC1E35")
+  geom_text(data = data.frame(lon = -23.5, lat = 65.2), aes(x = lon, y = lat), family = "EmojiOne", label = "\U1F30b", size = 16, vjust = .2, color = "#DC1E35") +
+  # Sources
+  geom_text(data = data.frame(lon = -23.8, lat = 64.3), aes(x = lon, y = lat), family = "EmojiOne", label = "\U2668", size = 16, vjust = .2, color = "#DC1E35")
  # geom_point(data = data.frame(lon = -16.332083, lat = 64.951083), aes(x = lon, y = lat))
 plotOfIceland
 ggsave(file="iceland.svg", plot=plotOfIceland)
