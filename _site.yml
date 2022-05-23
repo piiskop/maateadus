@@ -8,5 +8,7 @@ navbar:
       href: island.html
     - text: "Klimatoloogia"
       href: klimatoloogia.html
+    - text: "Andmeallikad"
+      href: maateaduse-tarkvaraline-baas.html
     - text: "Autor"
       href: about.html

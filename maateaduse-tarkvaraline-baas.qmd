@@ -1,0 +1,293 @@
+---
+title: "Maateaduse tarkvaraline baas"
+author: "peacecop kalmer:"
+format: html
+editor: visual
+bibliography: references.bib
+biblio-style: biblatex
+---
+
+# Maa-ameti geoportaal
+
+## Ülesande püstitus
+
+Tutvuda põhjalikult Maa-ameti geoportaaliga (kõigi kolme rakendusega),
+nii ruumiandmetega (kaartidega) kui ka kogu taustaandmestikuga
+(metaandmed) ja võimalustega! Koostada enda valitud umbes 20 kuni 30
+km^2^ suuruse ala kohta kirjeldus kasutades vähemalt kaheksat erinevat
+andmegruppi (ajaloolised kaardid, geoloogia, muld jne)! Kasuta vaid
+maa-ameti geoportaali, ära kuskilt mujalt mingit infot juurde hangi!
+Võid lisada ekraanipilte või kaardipilte. Ala vali soovitavalt
+väljaspool tiheasustusalasid (väljaspool linnasid või väljaspool
+kohalikke keskusi)! Ala valikul lähtu (kui võimalik) ka enda huvist!
+
+## Lahendus
+
+Lähtuvalt enda huvist, valisin alaks enda elupiirkonna, mis on näidatud
+joonisel @fig-area.
+
+```{r label = "fig-area",fig.cap="blablabl"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/atK7reRY")
+```
+Mullastikukihilt näeme, et idaosas laiuvad siirdesoo, madalsoo- ja rabamullad, sest seal on Harku raba, lääneosas paepealsed mullad, sest seal on paasi ja karjäär [@maaamet_mullastiku]. Põhjaosas näeme võrdlemisi suurt punaselt tähistatud ala, mille mullasisaldus pole teada, sest inimesed olevat seal rohkem möllanud, kui kaardistajad suutnud kaardistada. Tegemist on Harku karjääri mahajäetud alaga. Kollaselt on tähistatud leostunud ja leetjad mullad. Näeme ka kahkjate leetunud gleimuldade, küllastunud ja küllastamata turvastunud muldade, leedemuldade, koreserikaste leostunud muldade ja kindlasti veel muud liiki muldade alasid, mida annab sellelt kirjult kaardilt otsida. Kaardi kirjusus näitab, kuivõrd mullaliikide rikas minu elupiirkond on. Ilma ütlemata, kus ma elan, mainin, et üle Instituudi tee, kus karjatatakse šoti mägiveiseid, on paepealsed gleimullad, alal, kus kasvavad marjad, puu- ja köögiviljad, on gleistunud koreserikkad rähkmullad, mahajäetud Eesti Bioloogiainstituudi hoonete all on korseserikkad rähksed ja rähksed gleimullad, kohas, kus kogun vahtramahla, on lammi-, glei- ja turvastunud mullad, kohas, kus korjan kasemahla, on madalsoomullad. Mustikate ala on ka mullaliikide suhtes kaardistamata.:
+```{r label = "soil"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/pBEqTL7k")
+```
+
+Verstakaardilt näeme, et põhitänavad olid juba siis olemas, kui see kaart loodi. Tallinn-Keila maantee ja Harku-Rannamõisa tee ristmiku lähedal oli toona kool.
+
+Riikliku geodeetilise võrgu andmekihilt näeme valitud alas kaht tähistust: Hüüru, Harku ja Mäeküla geodeetilised punktid. Need on märgid, mille geograafilised andmed on teada ja mis on abiks kaardistamises.
+
+```{r label = "geodetical-net"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/W3QVRKXo")
+```
+Vastavalt põhjavee kaitstuse hinnangule on minu eluala puha kaitsmata. Harku raba on nõrgalt kaitstud. Rohkem kaitset näeme Tallinnas.
+
+```{r label = "groundwater"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/eP7GGI")
+```
+Vastavalt pinnakatte settetüüpide andmetele on minu maja all õhukese pinnakattega ala. Vahtrapuude all on moreen, mustikate all madalamal soosetted ja kõrgemal tuulesetted. Vääna jõe sängis täheldame jõesetteid. Üsna suur ala on ka meresetteid, kuigi mereni on ikka palju maad visata. Põhjas näeme veel tehnogeenseid setteid ja Pääskülas glatsiofluviaalseid setteid.
+
+```{r label = "sediments"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/DRGCuoUM")
+```
+Vastavalt aluspõhja arvamuste andmetele on minu maja all erinev värk võrreldes sellega, mis on Instituudi tee ja Paldiski maantee ristmiku all. Kuna legendis on tähistused nii kribult kirjutatud, et mitte midagi välja ei loe, siis ma ei teagi, mis värgid need on.
+
+
+```{r label = "base"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/LQm3vfz8")
+```
+Vastavalt litoloogiliste settetüüpide andmetele on minu maja all samuti tundmatu värk, sest legendis on nt peenliiv ja madalsooturvas tähistatud koos savi, aleuriidi, viirsavi, veeriste ja munakatega, merelise mudaga, liivaka viirsette, liiva ja kruusaga ühtmoodi. Samuti ei saa aru, mida tähendavad kriipsud ja punktid, sest legendis on need mingite ruutude sees, aga kaardil ruute pole.
+
+
+```{r label = "litology"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/VbTU3BO")
+```
+Allikate ja karstiaukude andmekihilt tuvastasin kolm allikat, mis on kõik siinsamas Harku Mõisajärve kalda juures. {#springs}
+
+```{r label = "springs"}
+knitr::include_app("https://xgis.maaamet.ee/xgis2/page/link/she8MKMh")
+```
+# Muud andmebaasid
+
+## Ülesande püstitus
+
+Eelmises ülesanded olnud kirjeldust täienda teistest andmebaasidest saaduga! Ennem tutvu vastava rakenduse võimalustega! Kasuta vähemalt kolme andmebaasi!
+
+## Lahendus
+
+Keskkonnakaiste infosüsteemi kaardid on väga krüptograafilised. Tähistatud on mingid alad, aga inimloetavat kirjeldust ei ole [@keskkonnaagentuur]. Keskkonnaagentuurist leiab andmeid keskkonnaseire ja analüüside, ilma ja kliima kohta.
+
+Keskkonnaportaalist leiab andmeid looduse kaitse, vee, keskkonnaseire, loodusvarade, jäätmete ja ohuobjektide ja välisõhu kohta [@keskkonnaportaal]. Võõrliikidest leidub siin Sosnovski karuputke. Olen isegi seda kohanud, kuigi üldse mitte kaardile märgitud, vaid teises kohas. Siin on keskkonnaohtlik objekt Harku Autokeskuse mahuti. Seda ma kohanud ei ole. Siin on juba eelmises ülesandes mainitud kolm allikat (@springs), Laabi, Kanarbiku ja Rohtla kraav, Järveotsa oja, üks nimetu tehisjärv ja Mõisajärv. Siin on seitse tarbepuurkaevu, Harku Rukkilille puurkaev, kaks Harku Vangla puurkaevu ja üks üldsine Harku puurkaev, mille vaati mõtlesin ükskord koos mägironimisvarustusega ronida. Siin on leitud talilinnustikku, ohustatud soontaime- ja samblaliike ja kaitsealuseid seeneliike. Paiksed õhusaaste allikad on Teede REV-2, Harku Karjäär, Harku Autokeskus koos nimetatud tünniga, Harku ja Murru Vangla  ja Riigi Kinnisvara Katlamajad. Kaitstavad loodusobjektid on Harku mõisa park, Harku metsa kaitseala. Siin on kolm töötavat ja viis suletud jäätmekäitluskohta. Harku alevik on Tallinna ja ümbruse reoveekogumisalas. Kaitsealuste liikide leiukohti on siin 17, millest kaheksa on kolmandas, ülejäänud teises kaitsekategoorias. Heitveelaskmeid on siin üks - Rohtla, mis on ühtlasi ka reoveepuhastusjaam. Vääriselupaiku on siin seitse. Üks neist asub Harku Mõisajärvest kirdes. Kui pimedas suveöös jalgrattaga läbi selle metsa sõidan, siis nimetan seda kohta Sünklaaneks ja see ongi ürgmets, kus on keelatud raiumine ning surnud ja lamapuidu eemaldamine. Kasvavad seal jänesekapsas, kuused, tammed, männid, vahtrad, saared, jalakad. Täheldatud on, et metsa "alla on visatud väga palju olmeprügi, biojäätmeid ja prügistamine jätkub". Ilmselt on ka selle eemaldamine keelatud, sest ürgmetsast ei või mitte midagi eemaldada, küll aga võib seda ilmselt rikastada. Üle selle tee, mida mööda ma aegajalt jalgrattaga liigun, on teine väärisala, mille kohta on märgitud, et seal olevat vähesel määral sellist värki nagu "Opegrapha spp".
+
+![Väärisalal *2025183* olev ürgne ja puutumatu vääriskülmik](külmik.jpg)
+
+Üks muu väärisala on samuti seotud prügiga. Lisaks leidub seal kaski ja lehiseid. Lisaks on ka nimetatud Rohtla reovärgi juures väärisala. Nüüd ma siis tean, kus see kurikuulus Rohtla asub. Sain ka teada, teada, kus asub Agro Bunkeri reovee sette käitluskoht. Oh, ma rohkem ei viitsi otsida, muidu ma jäängi huvitavaid kohti leidma! Võtan parem ette järgmise andmebaasi.
+
+Metsaportaalist leiab andmeid metsaeraldiste, metsateatiste, ekspertiiside, looduskaitse, veekaitse, muinsuskaitse kohta [@metsaportaal]. Juba vaikimisi kaardilt näen, kuhu voolab vesi Harku Mõisajärvest. Hästi on tähistatud valglad, mis võimaldab teostada matka nt mööda Harku oja, mis on osaliselt maaalune.
+
+# Lähipiirkondade geoportaalid
+
+## Ülesande püstitus
+
+Tutvu mõne lähiriigi geoportaaliga ja püüa sealt leida midagi enamat kui lihtsalt topograafilised andmed! Tee sellest kuvatõmmis ja paarilauseline seletus juurde, et millega on tegu! Võrdle kasutatud geoportaali ühega kolmest Eesti geoportaali kaardirakendusest; mis on nende peamised erinevused ja sarnasused just kasutamise ja selle mugavuse mõttes!
+
+## Lahendus
+
+Soome kaardiportaal Paikkatietoikkuna erineb Maaameti kaardiportaalist kasvõi seetõttu, et kohe alguses pakutakse algajale juhendit [@paikkatietoikkuna]. Lisaks saab kaarti kallutada, mille funktsionaalsus Maaameti kaardiportaalis puudub. Tahtsin valida kaardikihiks kolmemõõtmeilisi Helsinki ehitisi. Iga kord sain veateate, et kahemõõtmelisel kaardil neid ei saa kuvada. Ühtlasi ei leidnud ma võimalust, kuidas lülituda ümber kolmemõõtmelisele kaardile. Kui Maaameti kaardirakenduses näeb vähemalt kasvõi kribult legendi, siis Paikkatietoikkunast me seda üldse ei leia. Tuleb vaid klikkida konkreetsele alale, et saada infot.
+```{r label = "paikkatietoikkuna"}
+knitr::include_app("https://kartta.paikkatietoikkuna.fi/?lang=en")
+```
+
+# Veel andmebaase
+
+## Ülesande püstitus
+
+Täienda oma Eesti piirkonna kohta tehtut teistest andmebaasidest leituga! Kasuta vähemalt kolme kuni nelja erinevat andmebaasi, kust on võimalik leida lisainfot sin ukirjeldatava ala kohta!
+
+## Lahendus
+
+Rahvusarhiivi kaardirakendusest leidsin vanu kaarte Harku kohta [@kaardid]. Nt 19. sajandi teises pooles lõppes Instituudi tee suur osa Harku mõisaga ja edasi oli väike tee.
+
+```{r label = "ra"}
+knitr::include_app("https://www.ra.ee/kaardid/index.php/et/map/view?id=4617&_xr=eNotylsOQDAUhOG9nA1whETGBmzjhKYaLVWXF%252BneKX36v0xGwLgNyk7Q%252FNjBJciJL3YlYZjoXRqQtzKo7F7CfGZfbh2%252FvQbpYMZEBm25nNqCrCz6FP09K5A6qIvxASIGJRY%253D")
+```
+
+Lisaks on Rahvusarhiivis fotode, digiteeritud arhiiviallikate, filmide jpm arhiiv.
+
+Eesti Rahvusraamatukogu DIGITAALARHIIVis on ajakirjandusväljaanded [@digar]. Leidsin sealt kirje *Harku mõisa aiatorn*, mis on pilt ühest tornist veekogu ääres trükituna paberile, mille tagaküljele on kirjutatud hoopis *Porkuni*. Pärast seda mul enam otsida ei lubatud teatades, et server olevat maas.
+
+Kultuurimälestiste registrist leiab andmeid "kõikide Eestis riikliku kaitse all olevate mälestiste kohta" [@tere]. Otsisin alarubriigist MKA arhiiv Harku kohta ja leidsin muuseas kirje, millest lugesin välja *mentaalbioloogia Instituut*. Paistab, et selles süsteemis ei tunta poolitamisreegleid ja muidugi polnud tegemist mentaalbioloogiaga, vaid eksperimentaalbioloogiaga. Selles arhiivis on nt näha mõisahoone põhiplaan.
+
+# Interpoleerimine
+
+## Ülesande püstitus
+
+Täiendad eelolevat (Eestis oleva piirkonna kirjeldus) kliimaandmetega, selleks
+kasutad kliimanorme
+(http://www.ilmateenistus.ee/kliima/kliimanormid/ohutemperatuur/), konkreetsemalt:
+aasta keskmine temp, abs aasta maks ja abs aasta min temperatuur, aasta sademete hulk,
+aasta ööpäeva sademete maks, aasta keskmine tuulekiirus. Sinu koha (praeguse näite puhul
+Järvakandi) jaoks tuleb kasutada interpoleerimist – võta kolme lähima jaama andmed
+(soovitavalt erinevatest suundadest; mul on praegu neli – Pärnu ei sobi, kuna liialt mere
+ääres, samas on Kuusiku jaamas pisut ekstreemesed näitajad, kuna mõõtmiskoht on
+ebaharilikul reljeefvormil) ning nende kaugust arvestades sinu alast arvuta uus väärtus.
+Kaugust mõõda linnulennult ja mõõtmiseks kasuta maa-ameti geoportaali või Google
+mapsi, Delfi kaarti vms.
+Interpoleerimine on geo- ja keskkonnavaldkonnas hästi tavapärane tegevus. Meil ei ole
+kunagi niipalju andmeid, et see kataks ühtlaselt kogu ruumi, vaid meil on hajusate punktide
+pilv, mille kohta on olemas andmed (praegusel juhul kliimanäitaja). Et kogu ruum
+andmetega katta; näiteks on meil kõrguspunktid ja tahame sellest teha kogu ala katva
+reljeefimudeli, siis me peamegi kasutama interpoleerimist.
+Suurte mahtude korral teeb seda muidugi arvuti ja see modelleerimine võib võtta ka arvutil
+päris palju aega.
+Kuidas teie aga interpoleerite? Lihtsaim on teha seda arvutades, aga võib ka kasutada
+näiteks vabavaralist QGIS tarkvara. Viimatimainitu võite enda arvutitesse laadida nii ehk
+naa, sest ühe ülesande võib ka sellega teha.
+Nö käsitsi arvutades lihtsalt lähtud sellest, et uuritavale punktile (Järvakandile) lähemal olev
+vaatlusjaama (Kuusiku) kliimanäitaja omab peaaegu 3 korda suuremat kaalu kui kaugeima
+(Viljandi) oma. Viimane käib minu näite kohta!
+
+## Lahendus
+
+Keskkonnaagentuuri saidil on olemas Meteoroloogilise seire jaamade asukohtade koordinaadid [@vaatlusvrk].
+```{r}
+convert_from_dms_to_d <- function(d, m, s) {
+  return(d + m / 60 + s / 3600)
+}
+
+# Create longitude/latitude matrix
+longitudes <- c(
+  24.580559, # kodu
+  convert_from_dms_to_d(24, 36, 10), # Harku
+  convert_from_dms_to_d(24, 2, 24), # Pakri
+  convert_from_dms_to_d(23, 48, 56), # Lääne-Nigula
+  convert_from_dms_to_d(25, 24, 33) # Türi
+)
+latitudes <- c(
+  59.389001, # kodu
+  convert_from_dms_to_d(59, 23, 53), # Harku
+  convert_from_dms_to_d(59, 23, 22), # Pakri
+  convert_from_dms_to_d(58, 47, 4), # Lääne-Nigula
+  convert_from_dms_to_d(58, 48, 31) # Türi
+)
+icons <- c(
+  "\U1F9CD", # kodu
+  "\U1F321", # Harku
+  "\U2614", # Pakri
+  "\U1F32C", # Lääne-Nigula
+  "\U1F327" # Türi
+)
+coordinates <- data.frame(longitudes, latitudes, icons)
+print(min(coordinates$longitudes))
+print(min(coordinates$latitudes))
+print(max(coordinates$longitudes))
+print(max(coordinates$latitudes))
+
+```
+
+
+```{r figureForNeeruti, fig.cap="Õhutemperatuuri ja tuule kiiruse andurite võimalikud asukohad Neeruti piirkonnas"}
+librarian::shelf("leaflet")
+map <- leaflet() %>% addProviderTiles(providers$Esri.WorldTopoMap) %>% fitBounds(min(coordinates$longitudes) - 0.1, min(coordinates$latitudes) - .1, max(coordinates$longitudes) + .1, max(coordinates$latitudes) + .1)
+for (coordinate in 1:nrow(coordinates)) {
+  map <- map %>% addLabelOnlyMarkers(lng = coordinates$longitudes[coordinate], lat = coordinates$latitudes[coordinate], label = coordinates$icons[coordinate], labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px"))
+}
+
+map
+#leaflet() %>% addProviderTiles(providers$Esri.WorldTopoMap) %>% fitBounds(23.81555, 58.73, 24.74367904663087, 59.434799194333595) %>% addLabelOnlyMarkers(lng = 24.580559, lat = 59.389001, label = "\U1F9CD", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>%
+#  addLabelOnlyMarkers(lng = 24.60278, lat = 59.39806, label = "\U1F321", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>%
+#  addLabelOnlyMarkers(lng = 24.04000, lat = 59.38944, label = "\U2614", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>%
+#  addLabelOnlyMarkers(lng = 23.81556, lat = 58.78444, label = "\U1F32C", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>%
+#  addLabelOnlyMarkers(lng = 23.81556, lat = 58.78444, label = "\U1F32C", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>%
+#  addLegend("bottomright", labels = c("\U1F321: Tallinn-Harku aeroloogiajaam", "\U2614: Pakri meteoroloogiajaam", "\U1F32C: Lääne-Nigula meteoroloogiajaam", "\U1F9CD: kodu"), title = "Andurid", opacity = .8, colors = c("", "", "", ""))
+```
+
+(ref:temperature-citation) @hutemperatuur 
+
+```{r label = "interpolation"}
+
+locations <- matrix(c(longitudes, latitudes), ncol = 2, byrow = FALSE)
+colnames(locations) <- c("longitude", "latitude")
+rownames(locations) <- c("kodu", "Harku", "Pakri", "Lääne-Nigula", "Türi")
+# Calculation of distances
+librarian::shelf("geosphere")
+dist_mat <- distm(locations, fun = distGeo)
+distances_from_home <- dist_mat[1,2:ncol(dist_mat)]
+weights <- (sum(distances_from_home) / distances_from_home) / sum(sum(distances_from_home) / distances_from_home)
+interpolate <- function(meter) {
+  return(sum(weights * meter))
+}
+
+convert_from_degrees_c_to_k <- function(degrees_c) {
+  return(degrees_c + 273.15)
+}
+
+yearly_mean_temperature <- convert_from_degrees_c_to_k(c(6.4, 6.7, 6.4))
+yearly_abs_max_temperature <- convert_from_degrees_c_to_k(c(34.3, 33.5, 33.5))
+yearly_abs_min_temperature <- convert_from_degrees_c_to_k(c(-29.4, -27, -32.7))
+
+temperature <- data.frame("location" = c("Harku", "Pakri", "Lääne-Nigula"), "yearly_mean_temperature" = yearly_mean_temperature, "yearly_abs_max_temperature" <- yearly_abs_max_temperature, "yearly_abs_min_temperature" <- yearly_abs_min_temperature)
+number_of_stations <- nrow(temperature)
+new_row <- number_of_stations + 1
+temperature[new_row, 1] <- "kodu"
+temperature[new_row, 2] <- interpolate(yearly_mean_temperature)
+temperature[new_row, 3] <- interpolate(yearly_abs_max_temperature)
+temperature[new_row, 4] <- interpolate(yearly_abs_min_temperature)
+colnames(temperature) <- c("Asukoht", "Aasta keskmine temp", "Abs aasta maks temperatuur", "Abs aasta min temperatuur")
+
+print_table <- function(data_frame, caption) {
+    if (!is.null(knitr::opts_knit$get('rmarkdown.pandoc.to')) && (knitr::opts_knit$get('rmarkdown.pandoc.to') == "docx")) {
+      librarian::shelf("flextable")
+      table <- (flextable(data_frame))
+    } else {
+      librarian::shelf("kableExtra")
+      table <- (kable(data_frame, format = "html", booktabs = TRUE, escape = FALSE, caption = caption, digits = 2))
+    } 
+  return(table)
+}
+
+
+      librarian::shelf("kableExtra")
+
+print_table(temperature, paste0("Kodukoha aasta keskmise, minimaalse ja maksimaalse temperatuuri interpoleerimine kelvinites aastate 1991 kuni 2020 kliimanormide alusel", " ((ref:temperature-citation))")) %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+    latex_options = "scale_down",
+    full_width = TRUE
+      )
+```
+(ref:precipitations-citation) @sademed 
+```{r}
+yearly_precipitations <- c(700e-3, 688e-3, 726e-3)
+daily_precipitations <- c(81.4e-3, 102.5e-3, 63.7e-3)
+
+precipitations <- data.frame("location" = c("Harku", "Lääne-Nigula", "Türi"), yearly_precipitations, daily_precipitations)
+
+precipitations[new_row, 1] <- "kodu"
+precipitations[new_row, 2] <- interpolate(yearly_precipitations)
+precipitations[new_row, 3] <- interpolate(daily_precipitations)
+colnames(precipitations) <- c("Asukoht", "Aasta sademete hulk", "Aasta ööpäeva sademete maks")
+
+print_table(precipitations, paste0("Kodukoha aasta keskmise ja ööpäevase maksimaalse sademete hulga interpoleerimine meetrites aastate 1991 kuni 2020 kliimanormide alusel", " ((ref:precipitations-citation))")) %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+    latex_options = "scale_down",
+    full_width = TRUE
+      )
+
+```
+(ref:wind-citation) @tuul 
+```{r}
+yearly_wind_speed <- c(3.3, 4.1, 3.7, 2.3)
+
+wind_speed <- data.frame("location" = c("Harku", "Pakri", "Lääne-Nigula", "Türi"), yearly_wind_speed)
+number_of_stations <- nrow(wind_speed)
+new_row <- number_of_stations + 1
+
+wind_speed[new_row, 1] <- "kodu"
+wind_speed[new_row, 2] <- interpolate(yearly_wind_speed)
+colnames(wind_speed) <- c("Asukoht", "Aasta keskmine tuulekiirus")
+
+print_table(wind_speed, paste0("Kodukoha aasta keskmise tuule kiiruse interpoleerimine meetrites sekundi kohta aastate 1991 kuni 2020 kliimanormide alusel", " ((ref:wind-citation))")) %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+    latex_options = "scale_down",
+    full_width = TRUE
+      )
+
+```

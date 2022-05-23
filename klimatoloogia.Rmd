@@ -308,10 +308,9 @@ Andurite võimalikud asukohad on märgitud interaktiivsele kaardile \@ref(fig:fi
 #mapForNeeruti <- add_osm_objects(map = mapForNeeruti, obj = objectsAsNatural)
 #print_osm_map(mapForNeeruti)
 
-library("OpenStreetMap")
 #mapForNeeruti = openmap(c(59.31232, 26.10424), c(59.301507, 26.137566), type = "osm")
 #plot(mapForNeeruti)
-library(leaflet)
+librarian::shelf("leaflet")
 leaflet() %>% addProviderTiles(providers$Esri.WorldTopoMap) %>% fitBounds(26.114, 59.31232, 26.13, 59.301507) %>% addLabelOnlyMarkers(lng = 26.112, lat = 59.308577, label = "\U1F321", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>% addLabelOnlyMarkers(lng = 26.134, lat = 59.3115, label = "\U1F321", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>% addLabelOnlyMarkers(lng = 26.124, lat = 59.304, label = "\U1F321", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>% addLabelOnlyMarkers(lng = 26.138, lat = 59.307, label = "\U1F321", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>% addLabelOnlyMarkers(lng = 26.113, lat = 59.308577, label = "\U1F32C", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>% addLabelOnlyMarkers(lng = 26.135, lat = 59.3115, label = "\U1F32C", labelOptions = labelOptions(noHide = T, textOnly = T, textsize = "32px")) %>% addLegend("bottomright", labels = c("\U1F321: termoandur", "\U1F32C: tuuleandur"), title = "Andurid", opacity = .8, colors = c("", ""))
 ```
 
