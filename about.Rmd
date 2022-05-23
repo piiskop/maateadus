@@ -2,4 +2,5 @@
 title: "Autor"
 ---
 
-Olen peacecop kalmer: ja minu üliõpilaskood Tallinna Ülikoolis on *210951MLLB.LT*.
+Olen peacecop kalmer: ja minu üliõpilaskood Tallinna Ülikoolis on
+*210951MLLB.LT*.
