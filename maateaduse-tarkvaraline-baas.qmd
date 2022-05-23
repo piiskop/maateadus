@@ -372,9 +372,32 @@ rownames(locations) <- c("kodu", "Harku", "Pakri", "Lääne-Nigula", "Türi")
 librarian::shelf("geosphere")
 dist_mat <- distm(locations, fun = distGeo)
 distances_from_home <- dist_mat[1,2:ncol(dist_mat)]
-weights <- (sum(distances_from_home) / distances_from_home) / sum(sum(distances_from_home) / distances_from_home)
-interpolate <- function(meter) {
-  return(sum(weights * meter))
+
+interpolate <- function(meters, stations) {
+  #sum_of_distances <- 0
+  current_distances <- c()
+  
+  for (index_of_distance in 1:length(distances_from_home)) {
+    if (index_of_distance %in% stations) {
+      current_distances <- c(current_distances, distances_from_home[index_of_distance])
+      #sum_of_distances <- sum_of_weights + distances_from_home[index_of_distance]
+    }
+  }
+  
+  weights <- (sum(current_distances) / current_distances) /   sum(sum(current_distances) / current_distances)
+  interpolated_coordinate <- sum(weights * meters)
+#  index_of_meter <- 1
+#  print("jobu")
+ # for (index_of_weight in 1:length(weights)) {
+  #  print(index_of_weight)
+   # if (index_of_weight %in% stations) {
+     # print(weights[index_of_weight])
+    #  print(meters[index_of_meter])
+    #  interpolated_coordinate <- interpolated_coordinate + weights[index_of_weight] * meters[index_of_meter]
+    #}
+    #index_of_meter <- index_of_meter + 1
+  #}
+  return(interpolated_coordinate)
 }
 
 convert_from_degrees_c_to_k <- function(degrees_c) {
@@ -389,9 +412,9 @@ temperature <- data.frame("location" = c("Harku", "Pakri", "Lääne-Nigula"), "y
 number_of_stations <- nrow(temperature)
 new_row <- number_of_stations + 1
 temperature[new_row, 1] <- "kodu"
-temperature[new_row, 2] <- interpolate(yearly_mean_temperature)
-temperature[new_row, 3] <- interpolate(yearly_abs_max_temperature)
-temperature[new_row, 4] <- interpolate(yearly_abs_min_temperature)
+temperature[new_row, 2] <- interpolate(yearly_mean_temperature, stations = c(1, 2, 3))
+temperature[new_row, 3] <- interpolate(yearly_abs_max_temperature, stations = c(1, 2, 3))
+temperature[new_row, 4] <- interpolate(yearly_abs_min_temperature, stations = c(1, 2, 3))
 colnames(temperature) <- c("Asukoht", "Aasta keskmine temp", "Abs aasta maks temperatuur", "Abs aasta min temperatuur")
 
 print_table <- function(data_frame, caption) {
@@ -408,7 +431,7 @@ print_table <- function(data_frame, caption) {
 
       librarian::shelf("kableExtra")
 
-print_table(temperature, paste0("Kodukoha aasta keskmise, minimaalse ja maksimaalse temperatuuri interpoleerimine kelvinites aastate 1991 kuni 2020 kliimanormide alusel", " ((ref:temperature-citation))")) %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+print_table(temperature, caption = "Kodukoha aasta keskmise, minimaalse ja maksimaalse temperatuuri interpoleerimine kelvinites aastate 1991 kuni 2020 kliimanormide alusel [@hutemperatuur]") %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
     latex_options = "scale_down",
     full_width = TRUE
       )
@@ -426,8 +449,8 @@ daily_precipitations <- c(81.4e-3, 102.5e-3, 63.7e-3)
 precipitations <- data.frame("location" = c("Harku", "Lääne-Nigula", "Türi"), yearly_precipitations, daily_precipitations)
 
 precipitations[new_row, 1] <- "kodu"
-precipitations[new_row, 2] <- interpolate(yearly_precipitations)
-precipitations[new_row, 3] <- interpolate(daily_precipitations)
+precipitations[new_row, 2] <- interpolate(yearly_precipitations, stations = c(1, 3, 4))
+precipitations[new_row, 3] <- interpolate(daily_precipitations, stations = c(1, 3, 4))
 colnames(precipitations) <- c("Asukoht", "Aasta sademete hulk", "Aasta ööpäeva sademete maks")
 
 print_table(precipitations, paste0("Kodukoha aasta keskmise ja ööpäevase maksimaalse sademete hulga interpoleerimine meetrites aastate 1991 kuni 2020 kliimanormide alusel", " ((ref:precipitations-citation))")) %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
@@ -441,7 +464,7 @@ Tabelis @tbl-wind-speed on esitatud lähte- ja interpoleeritud andmed tuule kiir
 
 (ref:wind-citation) @tuul
 
-```{r lable = "tbl-wind-speed"}
+```{r label = "tbl-wind-speed"}
 #| code-line-numbers: true
 yearly_wind_speed <- c(3.3, 4.1, 3.7, 2.3)
 
@@ -450,7 +473,7 @@ number_of_stations <- nrow(wind_speed)
 new_row <- number_of_stations + 1
 
 wind_speed[new_row, 1] <- "kodu"
-wind_speed[new_row, 2] <- interpolate(yearly_wind_speed)
+wind_speed[new_row, 2] <- interpolate(yearly_wind_speed, stations = c(1, 2, 3, 4))
 colnames(wind_speed) <- c("Asukoht", "Aasta keskmine tuulekiirus")
 
 print_table(wind_speed, paste0("Kodukoha aasta keskmise tuule kiiruse interpoleerimine meetrites sekundi kohta aastate 1991 kuni 2020 kliimanormide alusel", " ((ref:wind-citation))")) %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
